@@ -29,7 +29,7 @@ Este script clona os repositórios dos plugins "Home" e "Wind Charge" e copia os
 O `docker-compose.yml` define os serviços necessários (servidor Minecraft e banco de dados MySQL) e configura as variáveis de ambiente.
 
 ## Possiveis conflitos:
-o container do mysql usa a porta **3306** e **25565** , garanta que elas estão livres ou mude as portas no arquivo `docker-compose.yml` e `Dockerfile`
+o container do mysql usa a porta **3306** e servidor spigot: **25565** , garanta que elas estão livres ou mude as portas no arquivo `docker-compose.yml` e `Dockerfile`
 
 
 ## Como Usar
