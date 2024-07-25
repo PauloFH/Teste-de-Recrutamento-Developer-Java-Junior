@@ -35,8 +35,8 @@ o container do mysql usa a porta 3308 e 25565, garanta que elas estão livres ou
 ## Como Usar
 1. Clone este repositório:
     ```bash
-    git clone https://github.com/seu-usuario/my-minecraft-server.git
-    cd my-minecraft-server
+    git clone https://github.com/PauloFH/Teste-de-Recrutamento-Developer-Java-Junior
+    cd Teste-de-Recrutamento-Developer-Java-Junior
     ```
 
 
