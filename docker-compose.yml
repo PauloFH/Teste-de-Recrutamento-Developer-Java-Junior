@@ -1,0 +1,33 @@
+version: '1.0'
+
+services:
+  db:
+    image: mysql:9.0.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: minecraft
+    ports:
+      - "3308:3308"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  minecraft:
+    build: .
+    environment:
+      MINECRAFT_EULA: "true"
+      DB_HOST: db
+      DB_PORT: 3308
+      DB_NAME: minecraft
+      DB_USER: root
+      DB_PASSWORD: root
+    ports:
+      - "25565:25565"
+    depends_on:
+      - db
+    volumes:
+      - ./minecraft:/minecraft
+    stdin_open: true
+    tty: true
+
+volumes:
+  db_data:
