@@ -1,0 +1,4 @@
+cooldown: 2
+teleport-particles: false
+particles-count: 1000
+max-homes: 1
