@@ -53,4 +53,4 @@ o container do mysql usa a porta 3308 e 25565, garanta que elas estão livres ou
 Para dúvidas, entre em contato:
 - **Nome**: Paulo Holanda
 - **Email**: [paulorfholanda@gmail.com](mailto:paulorfholanda@gmail.com)
-- **GitHub**: [PauloFH](https://github.com/Paulo)
+- **GitHub**: [PauloFH](https://github.com/PauloFH)
