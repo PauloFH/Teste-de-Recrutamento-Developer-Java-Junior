@@ -1,14 +1,17 @@
-version: '3.0.4'  
+version: '3.0.4'
 services:
   db:
     image: mysql:9.0.0
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: minecraft
+      MYSQL_USER: homes
+      MYSQL_PASSWORD: homes_password
     ports:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+      - ./init-mysql.sh:/docker-entrypoint-initdb.d/scripts/init-mysql.sh
 
   minecraft:
     build: .
@@ -16,9 +19,9 @@ services:
       MINECRAFT_EULA: "true"
       DB_HOST: db
       DB_PORT: 3306
-      DB_NAME: minecraft
-      DB_USER: root
-      DB_PASSWORD: root
+      DB_NAME: homes
+      DB_USER: homes
+      DB_PASSWORD: homes_password
     ports:
       - "25565:25565"
     depends_on:

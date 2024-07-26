@@ -10,8 +10,6 @@ WORKDIR $MINECRAFT_HOME
 RUN apt-get update && apt-get install -y curl git
 RUN curl -o server.jar https://download.getbukkit.org/spigot/spigot-${MINECRAFT_VERSION}.jar
 
-
-
 # Clone o repositório do plugin e copie o JAR gerado
 COPY scripts/setup-plugins.sh $MINECRAFT_HOME/
 RUN chmod +x setup-plugins.sh && ./setup-plugins.sh
