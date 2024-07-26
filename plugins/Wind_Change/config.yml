@@ -1,4 +1,4 @@
 wind-power: 2.0
-wind-particles: DRAGON_BREATH
+wind-particles: true
 wind-speed: 1.0
 wind-count-particles: 100
