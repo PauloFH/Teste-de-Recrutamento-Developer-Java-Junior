@@ -5,6 +5,6 @@ max-homes: 3
 database:
   host: db
   port: 3306
-  name: homes
+  name: minecraft
   username: homes
   password: homes_password

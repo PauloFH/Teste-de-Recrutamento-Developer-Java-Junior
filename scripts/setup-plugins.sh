@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 PLUGIN_REPO_HOME="https://github.com/PauloFH/Home-MCPlugin.git"
 PLUGIN_REPO_WIND="https://github.com/PauloFH/Wind_Charge-MCPlugin.git"

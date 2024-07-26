@@ -13,6 +13,7 @@ executando o comando de criação do container, o servidor estará disponível e
 
 ## Pré-requisitos
 
+- Linux ou WSL
 - Docker
 - Docker Compose
 
@@ -29,7 +30,7 @@ Este script clona os repositórios dos plugins "Home" e "Wind Charge" e copia os
 O `docker-compose.yml` define os serviços necessários (servidor Minecraft e banco de dados MySQL) e configura as variáveis de ambiente.
 
 ## Possiveis conflitos:
-o container do mysql usa a porta **3306** e servidor spigot: **25565** , garanta que elas estão livres ou mude as portas no arquivo `docker-compose.yml` e `Dockerfile`
+o container do mysql usa a porta **3306** e servidor spigot: **25565** , garanta que elas estão livres ou mude as portas no arquivo `docker-compose.yml` e `plugins/Home/Config.yml`
 
 
 ## Como Usar
@@ -42,10 +43,19 @@ o container do mysql usa a porta **3306** e servidor spigot: **25565** , garanta
 
 2. Execute o Docker Compose para construir e iniciar os serviços:
     ```bash
-    docker-compose up --build
+    sudo docker-compose up --build
+    ```
+3. Abra um terminal e rode o container teste de recrutamento e entre no terminal do container
+    ```bash
+    sudo docker start  teste-de-recrutamento-developer-java-junior-minecraft-1
+    sudo docker exec -it teste-de-recrutamento-developer-java-junior-minecraft-1 /bin/bash
+    ```
+4. Inicie o servidor
+    ```bash
+    java -Xmx2G -Xms2G -jar server.jar nogui
     ```
 
-4. O servidor Minecraft estará disponível na porta `25565`, e o banco de dados MySQL estará disponível na porta `3306`.
+5. O servidor Minecraft estará disponível na porta `25565`, e o banco de dados MySQL estará disponível na porta `3306`.
 
 
 ## Contato
